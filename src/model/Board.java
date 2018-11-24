@@ -56,7 +56,7 @@ public class Board {
 	}
 	
 	public Tile selectTile (int x, int y) {
-		if (x<0 || y<0 || x>board.length || y>board[0].length)
+		if (x<0 || y<0 || x>=board.length || y>=board[0].length)
 			return null;
 		return board[x][y];
 	}

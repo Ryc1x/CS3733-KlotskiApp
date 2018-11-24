@@ -101,14 +101,14 @@ public class KlotskiApp extends JFrame {
 		puzzleView.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
-				new SelectTile(KlotskiApp.this, board).mousePressed(e);
+				new SelectTile(KlotskiApp.this, board).select(e.getX(),e.getY());
 			}
 		});
 
 		this.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				new MoveTile(KlotskiApp.this, board).keyTyped(e);
+				new MoveTile(KlotskiApp.this, board).move(e.getKeyChar());
 			}
 		});
 		

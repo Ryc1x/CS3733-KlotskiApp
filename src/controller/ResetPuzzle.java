@@ -29,7 +29,7 @@ public class ResetPuzzle {
 		Tile t10 = new Tile(2,4,2,1);
 		t1.setLargest(true);
 		
-		board.addTile(t1,t2,t3,t4,t5,t6,t7);
+		board.addTile(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10);
 		
 		app.lblMoves.setText("Moves: 0");
 		app.repaint();

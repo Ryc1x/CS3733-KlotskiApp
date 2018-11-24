@@ -1,7 +1,6 @@
 package controller;
 
 import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 import view.PuzzleView;
 import model.Board;
@@ -17,11 +16,10 @@ public class SelectTile extends MouseAdapter {
 		board = b;
 	}
 	
-	@Override
-	public void mousePressed (MouseEvent e) {
+	public void select (int px, int py) {
 		PuzzleView view = app.getPuzzleView();
-		int x = e.getX()/100;
-		int y = e.getY()/100;
+		int x = px/100;
+		int y = py/100;
 		System.out.println(x + "  " + y);
 		board.setSelected(x, y);
 		view.repaint();
